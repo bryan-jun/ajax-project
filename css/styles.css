@@ -53,6 +53,7 @@
 
 .name{
   font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .sort-row{
@@ -69,6 +70,11 @@
   padding-right: 3rem;;
   padding-left: 1rem;
 }
+
+.hidden{
+  display: none;
+}
+
 
 #char-list{
   width: 100%;

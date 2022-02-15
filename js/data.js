@@ -11,7 +11,7 @@ if(previousDataJSON !== null){
   data = JSON.parse(previousDataJSON);
 }
 
-window.addEventListener('beforeunload'), beforeunloadF, false);
+window.addEventListener('beforeunload', beforeunloadF, false);
 
 function beforeunloadF(event){
   var dataJSON = JSON.stringify(data);

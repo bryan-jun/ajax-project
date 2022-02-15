@@ -1,4 +1,5 @@
 var userList = document.querySelector('#char-list');
+var dropD = document.getElementById('dropDown');
 
 function getCharList() {
   var xml = new XMLHttpRequest();
@@ -13,6 +14,7 @@ function getCharList() {
       if (xml.response[x].image !== ''){
       var newSquare = document.createElement('div');
       newSquare.setAttribute('class', 'square');
+      newSquare.setAttribute('houseId', xml.response[x].house)
 
       var newImage = document.createElement('img');
       newImage.setAttribute('src',xml.response[x].image);
@@ -29,10 +31,32 @@ function getCharList() {
       userList.append(newSquare);
       }
 
+
+
     }
 
   });
   xml.send();
 }
-
 getCharList();
+
+
+dropD.addEventListener('change', filter, false);
+
+function filter(){
+  for (var i=0; i < userList.children.length; i++){
+    if(dropD.value === "All"){
+      userList.children[i].setAttribute('class', 'square');
+    }
+    else{
+
+    if(userList.children[i].getAttribute('houseId') === dropD.value){
+      userList.children[i].setAttribute('class', 'square');
+    } else{
+      userList.children[i].setAttribute('class', 'hidden');
+    }
+
+  }
+}
+
+}
