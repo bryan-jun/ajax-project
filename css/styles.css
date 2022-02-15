@@ -75,26 +75,3 @@
   display: flex;
   flex-wrap: wrap;
 }
-
-@media screen and (max-width: 985px) {
-  .container {
-    max-width: 900px;
-  }
-
-  #head{
-    font-size: 30px;
-    left: 20px;
-  }
-
-  #main-nav{
-    font-size: 10px;
-  }
-
-  #house{
-    font-size: 10px;
-  }
-
-  .square{
-    width: 100%;
-  }
-}
