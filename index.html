@@ -8,11 +8,43 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
+    <div class="header">
+      <div id="head">Harry Potter Characters</div>
+      <div id="main-nav">FAVORITES</div>
+      </div>
   </header>
   <main>
+
+    <div data-view="front" id="frontview">
+      <div class="sort-row">
+      <select name="house" id="house">
+        <option value="none" selected disabled hidden>House Filter</option>
+        <option value="gryffindor">Gryffindor</option>
+        <option value="slytherin">Slytherin</option>
+        <option value="ravenclaw">Ravenclaw</option>
+        <option value="hufflepuff">Hufflepuff</option>
+        <option value="noHouse">None</option>
+      </select>
+      </div>
+
+      <div class="container">
+      <ul id="char-list">
+
+      </ul>
+
+</div>
+
+
+    </div>
+
+
+
+
+
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

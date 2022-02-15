@@ -1,0 +1,100 @@
+*{
+  font-family: 'Pridi', serif;
+}
+
+.header {
+  width: 100%;
+  background-color: #FFFFFF;
+  color: black;
+  height: 60px;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#head{
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+  position: relative;
+  left: 50px;
+
+}
+
+#main-nav{
+  position: relative;
+  right: 20px;
+  border: 1px solid #000000;
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+
+}
+
+#main-nav:hover{
+  cursor: pointer;
+}
+
+.image{
+  height: 400px;
+  width: 300px;
+}
+
+.square{
+  justify-content: center;
+  text-align: center;
+  width: calc(100% / 3);
+  padding-bottom: 20px;
+}
+
+
+.name{
+  font-weight: 700;
+}
+
+.sort-row{
+  padding-top: 20px;
+  position: relative;
+  right: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+#house{
+  font-size: 20px;
+  padding-right: 50px;;
+  padding-left: 10px;
+}
+
+#char-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 985px) {
+  .container {
+    max-width: 900px;
+  }
+
+  #head{
+    font-size: 30px;
+    left: 20px;
+  }
+
+  #main-nav{
+    font-size: 10px;
+  }
+
+  #house{
+    font-size: 10px;
+  }
+
+  .square{
+    width: 100%;
+  }
+}
