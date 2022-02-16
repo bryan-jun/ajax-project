@@ -1,62 +1,67 @@
-*{
-  font-family: 'Pridi', serif;
+* {
+  font-family: Pridi, serif;
 }
 
 .header {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #fff;
   color: black;
   height: 60px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.head{
+.head {
   font-weight: 700;
   font-style: normal;
   font-size: 3rem;
   position: relative;
   left: 50px;
-
 }
 
-.main-nav{
+.main-nav {
   position: relative;
   right: 20px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   background-color: black;
   color: white;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: 1rem;
-
 }
 
-.main-nav:hover{
+.main-nav:hover {
   cursor: pointer;
 }
 
-.image{
+.image {
   height: 400px;
   width: 300px;
 }
 
-.square{
+.image:hover {
+  cursor: pointer;
+}
+
+.square {
   justify-content: center;
   text-align: center;
   width: calc(100% / 3);
   padding-bottom: 1rem;
 }
 
-
-.name{
+.name {
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-.sort-row{
+.name:hover {
+  cursor: pointer;
+}
+
+.sort-row {
   padding-top: 1rem;
   position: relative;
   right: 1rem;
@@ -65,42 +70,96 @@
   justify-content: flex-end;
 }
 
-.house{
+.house {
   font-size: 1rem;
-  padding-right: 3rem;;
+  padding-right: 3rem;
   padding-left: 1rem;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-
-#char-list{
+#char-list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 985px) {
+.details {
+  display: flex;
+}
+
+.text-column {
+  padding-top: 5rem;
+  padding-left: 20rem;
+  width: 70%;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.pic-column {
+  padding-top: 5rem;
+  padding-left: 20rem;
+  width: 30%;
+}
+
+.detail-img {
+  height: 30rem;
+  width: 20rem;
+}
+
+#heart {
+  padding-top: 2rem;
+  padding-left: 0.8rem;
+}
+
+#fav {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+@media screen and (max-width: 1100px) {
+  .detail-img {
+    height: 20rem;
+    width: 15rem;
+  }
+
+  .pic-column {
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .details {
+    display: block;
+  }
+
+  .text-column {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
   .container {
     max-width: 900px;
   }
 
-  .head{
+  .head {
     font-size: 1.5rem;
     left: 1rem;
   }
 
-  .main-nav{
+  .main-nav {
     font-size: 1rem;
   }
 
-  .house{
+  .house {
     font-size: 1rem;
   }
 
-  .square{
+  .square {
     width: 100%;
   }
 }

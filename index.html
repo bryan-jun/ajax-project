@@ -9,35 +9,56 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
   <header>
     <div class="header">
       <div class="head">Harry Potter Characters</div>
-      <div class="main-nav">FAVORITES</div>
-      </div>
+      <div class="main-nav">FAVORITE</div>
+    </div>
   </header>
   <main>
 
-    <div data-view="front" id="frontview">
+    <div data-view="detail" class="hidden" id="detailId">
+
+
+
+      <div class="pic-column">
+        <img src="http://hp-api.herokuapp.com/images/harry.jpg" class="detail-img">
+      </div>
+      <div class="text-column">
+        <div id="dName">Name: Harry Potter</div>
+        <div id="dActor">Actor: Daniel Radcliffe</div>
+        <div id="dSpecies">Species: Humanr</div>
+        <div id="dYear">Year of Birth: 1980</div>
+        <div id="dWiz">Wizard: True</div>
+        <div id="dHouse">House Gryffindor</div>
+        <i id="heart" class="fa fa-heart-o"></i>
+        <div id="fav">Favorite</div>
+      </div>
+    </div>
+
+
+    <div data-view="front" class="" id="frontview">
       <div class="sort-row">
-      <select id="dropDown" name="house" class="house">
-        <option value="All" selected>All</option>
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Slytherin">Slytherin</option>
-        <option value="Ravenclaw">Ravenclaw</option>
-        <option value="Hufflepuff">Hufflepuff</option>
-        <option value="">None</option>
-      </select>
+        <select id="dropDown" name="house" class="house">
+          <option value="All" selected>All</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="">None</option>
+        </select>
       </div>
 
       <div class="container">
-      <ul id="char-list">
+        <ul id="char-list">
 
-      </ul>
+        </ul>
 
-</div>
+      </div>
 
 
     </div>
