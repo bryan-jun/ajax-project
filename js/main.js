@@ -18,6 +18,8 @@ function getCharList() {
         newSquare.setAttribute('species', xml.response[x].species);
         newSquare.setAttribute('year', xml.response[x].yearOfBirth);
         newSquare.setAttribute('wiz', xml.response[x].wizard);
+        newSquare.setAttribute('id', data.nextId);
+        newSquare.setAttribute('favorited', false);
 
         var newImage = document.createElement('img');
         newImage.setAttribute('src', xml.response[x].image);
@@ -31,7 +33,13 @@ function getCharList() {
 
         newSquare.appendChild(newName);
 
+        var newHeart = document.createElement('i');
+        newHeart.setAttribute('class', 'uHeart fa fa-heart-o');
+
+        newSquare.appendChild(newHeart);
+
         userList.append(newSquare);
+        data.nextId += 1;
       }
 
     }
@@ -63,6 +71,17 @@ function filter() {
 var button = document.querySelector('.main-nav');
 var allTab = document.getElementById('frontview');
 var detailTab = document.querySelector('#detailId');
+var header = document.querySelector('.head');
+
+header.addEventListener('click', home, false);
+
+function home(event) {
+  if (event.target && event.target.matches('.head')) {
+    allTab.className = '';
+    detailTab.className = 'hidden';
+    button.textContent = 'FAVORITES';
+  }
+}
 
 button.addEventListener('click', changeTab, false);
 
@@ -89,6 +108,7 @@ var detailW = document.getElementById('dWiz');
 var detailH = document.getElementById('dHouse');
 var detailS = document.getElementById('dSpecies');
 var detImg = document.querySelector('.detail-img');
+var heart = document.querySelector('.heart');
 
 squareC.addEventListener('click', navigation, false);
 
@@ -106,7 +126,31 @@ function navigation(event) {
 
     detImg.setAttribute('src', event.target.parentElement.firstChild.getAttribute('src'));
 
+    if (event.target.getAttribute('favorited') === true) {
+      heart.setAttribute('class', 'heart fa fa-heart');
+    } else if (event.target.getAttribute('favorited') === false) {
+      heart.setAttribute('class', 'heart fa fa-heart-o');
+    }
+
     button.textContent = 'ALL';
 
+  } else if (event.target && event.target.matches('.uHeart')) {
+    event.target.setAttribute('class', 'fHeart fa fa-heart');
+    event.target.setAttribute('favorited', true);
+  } else if (event.target && event.target.matches('.fHeart')) {
+    event.target.setAttribute('class', 'uHeart fa fa-heart-o');
+    event.target.setAttribute('favorited', false);
+  }
+}
+
+heart.addEventListener('click', favorite, false);
+
+function favorite(event) {
+  if ((event.target && event.target.matches('.heart'))) {
+    if (event.target.getAttribute('class') === 'heart fa fa-heart-o') {
+      event.target.setAttribute('class', 'heart fa fa-heart');
+    } else {
+      event.target.setAttribute('class', 'heart fa fa-heart-o');
+    }
   }
 }
