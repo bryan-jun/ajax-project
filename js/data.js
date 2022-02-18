@@ -7,13 +7,13 @@ var data = {
 
 var previousDataJSON = localStorage.getItem('javascript-local-storage');
 
-if(previousDataJSON !== null){
+if (previousDataJSON !== null) {
   data = JSON.parse(previousDataJSON);
 }
 
 window.addEventListener('beforeunload', beforeunloadF, false);
 
-function beforeunloadF(event){
+function beforeunloadF(event) {
   var dataJSON = JSON.stringify(data);
   localStorage.setItem('javascript-local-storage', dataJSON);
 }

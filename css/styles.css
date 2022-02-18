@@ -21,6 +21,10 @@
   left: 50px;
 }
 
+.head:hover {
+  cursor: pointer;
+}
+
 .main-nav {
   position: relative;
   right: 20px;
