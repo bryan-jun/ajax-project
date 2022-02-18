@@ -18,7 +18,6 @@ function getCharList() {
         newSquare.setAttribute('species', xml.response[x].species);
         newSquare.setAttribute('year', xml.response[x].yearOfBirth);
         newSquare.setAttribute('wiz', xml.response[x].wizard);
-        newSquare.setAttribute('id', data.nextId);
         newSquare.setAttribute('favorited', false);
 
         var newImage = document.createElement('img');
@@ -39,7 +38,7 @@ function getCharList() {
         newSquare.appendChild(newHeart);
 
         userList.append(newSquare);
-        data.nextId += 1;
+
       }
 
     }
