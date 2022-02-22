@@ -3,7 +3,7 @@ var dropD = document.getElementById('dropDown');
 
 function getCharList() {
   var xml = new XMLHttpRequest();
-  xml.open('GET', 'http://hp-api.herokuapp.com/api/characters');
+  xml.open('GET', 'https://hp-api.herokuapp.com/api/characters');
   xml.responseType = 'json';
 
   xml.addEventListener('load', function () {
